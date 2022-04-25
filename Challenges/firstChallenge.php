@@ -26,7 +26,7 @@ $radius = 5;
 $exponent = 2;
 $pi = 3.14;
 
-$areaCircle = $pi * pow($radius , $exponent);
+$areaCircle = $pi * pow($radius, $exponent);
 // other way $areaCircle = pi() * pow($radius , 2);
 
 echo "The Circle area is $areaCircle";
