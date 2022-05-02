@@ -1,0 +1,21 @@
+td {
+	width: 35px;
+	height: 35px;
+}
+
+table, td {
+	border: 1px solid #000;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+.black {
+	background: #000;
+}
+
+form {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
