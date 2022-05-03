@@ -8,6 +8,10 @@ if (empty($_POST['name'])) {
 } else {
     $name = $_POST['name'];
     $name = filter_var($name, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $name = trim($name);
+    if ($name == '') {
+        $error .= "Sorry but you have not entered your name <br>";
+    }
 }
 
 // Email validation
@@ -28,6 +32,10 @@ if (empty($_POST['message'])) {
 } else {
     $message = $_POST['message'];
     $message = filter_var($message, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $message = trim($message);
+    if ($message == '') {
+        $error .= "Sorry but you have not entered your message <br>";
+    }
 }
 
 // Message body
