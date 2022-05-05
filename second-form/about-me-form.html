@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>About Me Form</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center mt-5 pt-5">
+            <div class="col-md-7">
+                <h1 class="display-4">About Me Form</h1>
+                <hr class="bg-info" />
+                <p class="pb-1 mb-1">
+                    Thank you very much for your participation, complete this form and tell us a little more about yourself.
+                </p>
+                <p class="text-danger small pt-0 mt-0">
+                    * All fields are required
+                </p>
+
+                <div class="alert alert-success d-none" id="messageSuccess">Your message has been sent successfully</div>
+                <div class="alert alert-danger d-none" id="messageError"></div>
+
+                <form id="form">
+                    <div class="row form-group">
+                        <label for="name" class="col-form-label col-md-4">Name:</label>
+                        <div class="col-md-8">
+                            <input type="text" name="name" value="" id="name" class="form-control" required />
+                        </div>
+                    </div>
+
+                    <div class="row form-group">
+                        <label for="color" class="col-form-label col-md-4">Select a color: </label>
+                        <div class="col-md-8">
+                            <select class="form-control" id="color" name="color">
+                                <option value="black">Black</option>
+                                <option value="blue">Blue</option>
+                                <option value="brown">Brown</option>
+                                <option value="gray">Gray</option>
+                                <option value="green">Green</option>
+                                <option value="orange">Orange</option>
+                                <option value="pink">Pink</option>
+                                <option value="purple">Purple</option>
+                                <option value="red">Red</option>
+                                <option value="yellow">Yellow</option>
+                                <option value="white">White</option>
+                                <option value="turquoise">Turquoise </option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row form-group">
+                        <label for="languages" class="col-form-label col-md-4">My programming languages: </label>
+                        <div class="col-md-8">
+
+                            <div class="form-check form-check-inline">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" value="html" name="languages[]"/> HTML
+                                </label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" value="css" name="languages[]"/> CSS
+                                </label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" value="javascript" name="languages[]"/> Javascript
+                                </label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" value="python" name="languages[]"/> Python
+                                </label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" value="Java" name="languages[]"/> Java
+                                </label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" value="php" name="languages[]"/> PHP
+                                </label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" value="c-chart" name="languages[]"/> C#
+                                </label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" value="c-plus-plus" name="languages[]"/> C++
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row form-group">
+                        <label for="" class="col-form-label col-md-4">My gender: </label>
+                        <div class="col-md-8">
+                            <div class="form-check form-check-inline">
+                                <label for="" class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="gender" value="male"/>
+                                    Male <i class="fas fa-mars"></i>
+                                </label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <label for="" class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="gender" value="female"/>
+                                    Female <i class="fas fa-venus"></i>
+                                </label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <label for="" class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="gender" value="other"/>
+                                    Other <i class="fas fa-genderless"></i>
+                                </label>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-info">Send <i class="far fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    <script src="form.js"></script>
+</body>
+
+</html>
