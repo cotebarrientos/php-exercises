@@ -65,3 +65,23 @@ if ($error == "") {
 } else {
     echo $error;
 }
+
+// Connection with mysql
+
+require_once("connection.php");
+
+$sqlUniqueEmail = "SELECT * FROM user_registration WHERE email = :email LIMIT 1";
+$isReady = $connection->prepare($sqlUniqueEmail);
+$isReady->execute(array(":email" => $email));
+
+$searchEmail = $isReady->fetchAll();
+
+// foreach ($searchEmail as $value) {
+//     echo $value["email"];
+// }
+
+if ($searchEmail == false) {
+    $sql = "INSERT INTO user_registration (id,name,email) VALUES (NULL,:name,:email)";
+    $ready = $connection->prepare($sql);
+    $ready->execute(array(":name" => $name, ":email" => $email));
+}
